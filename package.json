@@ -1,0 +1,28 @@
+{
+  "name": "sortablerows",
+  "version": "1.0.0",
+  "description": "Draggable and sortable table rows. The output is an array of objects with a position attribute on each object.",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davicotico/SortableRows.git"
+  },
+  "keywords": [
+    "draggable",
+    "sortable",
+    "sortablerows",
+    "drag&drop",
+    "sort-items",
+    "sort-rows"
+  ],
+  "author": "David Tomas Ticona Saravia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davicotico/SortableRows/issues"
+  },
+  "homepage": "https://github.com/davicotico/SortableRows#readme"
+}

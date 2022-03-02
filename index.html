@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SortableRows v1.0.0 - David Ticona - Desarrollo de Software</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./dist/sortablerows.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><i class="fas fa-arrow-down-short-wide"></i> SortableRows</span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a href="https://davidticona.com" class="nav-link active" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.linkedin.com/in/david-ticona-saravia/" class="nav-link"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
+              >
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a class="btn btn-success" href="https://github.com/davicotico/SortableRows" target="_blank"><i class="fab fa-github"></i> View on Github</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="px-4 py-5 my-5 text-center border-bottom border-3 bg-secondary bg-opacity-10"
+    >
+      <h1 class="display-5 fw-bold">SortableRows v1.0.0</h1>
+      <h4>by Davicotico</h4>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Drag and Sort your items with <strong>THIS</strong> Sortable Table
+          Rows
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <div class="btn-group">
+            <a 
+              href="https://github.com/davicotico/SortableRows/stargazers" 
+              class="btn btn-light border-secondary"
+              target="_blank"
+              role="button"
+              ><i class="fas fa-star"></i></a>
+            <a 
+              id="btnStars"
+              href="https://github.com/davicotico/SortableRows/stargazers"
+              class="btn bg-white border-secondary"
+              target="_blank"
+              role="button"
+              ></a>
+          </div>
+          <div class="btn-group">
+            <a
+              href="https://github.com/davicotico/SortableRows/fork"
+              class="btn btn-light border-secondary"
+              target="_blank"
+              role="button"
+            >
+              <i class="fas fa-code-branch"></i> Forks
+            </a>
+            <a
+              id="btnForks"
+              href="https://github.com/davicotico/SortableRows/network/members"
+              class="btn bg-white border-secondary"
+              target="_blank"
+              role="button"
+            ></a>
+          </div>
+          <a href="https://github.com/davicotico/SortableRows" class="btn btn-success px-4 gap-3">
+            <i class="fab fa-github"></i> View on Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Demo</h3>
+          <p>Sort the rows by drag & drop, then click the Output button.</p>
+          <table id="myTable" class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>Company ID</th>
+                <th>Company name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-company-id="1" data-company-name="Huawei">
+                <td>1</td>
+                <td>Huawei</td>
+              </tr>
+              <tr data-company-id="2" data-company-name="Xiaomi">
+                <td>2</td>
+                <td>Xiaomi</td>
+              </tr>
+              <tr data-company-id="3" data-company-name="TikTok">
+                <td>3</td>
+                <td>TikTok</td>
+              </tr>
+              <tr data-company-id="4" data-company-name="Yandex">
+                <td>4</td>
+                <td>Yandex</td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="btnOutput" class="btn btn-success">
+            <i class="fas fa-check-square"></i> Output
+          </button>
+          <textarea id="txtOutput" class="form-control my-3" rows="10"></textarea>
+        </div>
+        <div class="col">
+          <h3>Install</h3>
+          <pre class="bg-secondary text-white p-1 border">
+npm install sortablerows</pre
+          >
+          <h3>How to use</h3>
+          <h4>Html Table</h4>
+          <p>Use the table with an <code>id</code> attribute</p>
+          <pre class="p-2 bg-light border">
+&lt;table id=&quot;myTable&quot;&gt;
+&lt;/table&gt;</pre>
+          <p>Use the <code>data</code> attribute for each row</p>
+          <pre class="p-2 bg-light border">
+&lt;tbody&gt;
+  &lt;tr data-company-id=&quot;1&quot; data-company-name=&quot;Huawei&quot;&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;Huawei&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr data-company-id=&quot;2&quot; data-company-name=&quot;Xiaomi&quot;&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;Xiaomi&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr data-company-id=&quot;3&quot; data-company-name=&quot;TikTok&quot;&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;TikTok&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr data-company-id=&quot;4&quot; data-company-name=&quot;Yandex&quot;&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;Yandex&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;</pre>
+          <h4>Javascript</h4>
+          <pre class="p-2 bg-light border">
+import { SortableRows } from &quot;sortablerows&quot;;
+import &quot;sortablerows/dist/sortablerows.css&quot;;
+var myTable = new SortableRows(&quot;myTable&quot;);
+document.getElementById(&quot;btnOutput&quot;).addEventListener(&quot;click&quot;, () =&gt; {
+  let output = myTable.getData();
+  console.log(output);
+});
+</pre>
+          
+          <h3>More projects</h3>
+          <div class="list-group">
+            <a href="https://github.com/davicotico/jQuery-Menu-Editor" class="list-group-item list-group-item-action">jQuery Menu Editor</a>
+            <a href="https://github.com/davicotico/jQuery-Menu-From-JSON" class="list-group-item list-group-item-action">jQuery Menu from JSON</a>
+            <a href="https://github.com/davicotico/PHP-Quick-Menu" class="list-group-item list-group-item-action">PHP Quick Menu</a>
+            <a href="https://github.com/davicotico/jQuery-formHelper" class="list-group-item list-group-item-action">jQuery formHelper</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <h3>Changelog</h3>
+          <h5>v1.0.0</h5>
+          <ul>
+              <li>First release</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center text-dark bg-light border-top">
+      <div class="text-center p-3">
+        <strong>
+        2022 &middot; <a href="https://davidticona.com/">davidticona.com</a> &middot; 
+        <a href="https://twitter.com/davicotico" target="_blank">@davicotico <i class="fab fa-twitter"></i></a>
+        </strong>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script type="module" src="./dist/sortablerows.js"></script>
+    <script type="module">
+      import { SortableRows } from "./dist/sortablerows.js";
+      var myTable = new SortableRows("myTable");
+      document.getElementById("btnOutput").addEventListener("click", () => {
+        let output = myTable.getData();
+        document.getElementById("txtOutput").innerHTML = JSON.stringify(output, null, 2);
+      });
+
+      //
+      fetch( "https://api.github.com/repos/davicotico/SortableRows").then(response => response.json())
+      .then( data => {
+        document.getElementById("btnStars").innerHTML = data.stargazers_count;
+        document.getElementById("btnForks").innerHTML = data.forks_count;
+      });
+    </script>
+  </body>
+</html>

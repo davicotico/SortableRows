@@ -1,0 +1,26 @@
+.draggable-table {
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+.draggable-table .draggable-table-tr {
+  position: absolute;
+  z-index: 10;
+  cursor: grabbing;
+}
+.draggable-table tbody tr {
+  cursor: grab;
+}
+.draggable-table tbody tr td {
+  user-select: none;
+}
+.draggable-table tbody tr {
+  background-color: #fff;
+}
+.draggable-table tbody tr.is-dragging {
+  background: #b8b8b7;
+  cursor: grabbing;
+}
+.draggable-table tbody tr.is-dragging td {
+  color: #fff;
+}
