@@ -1,19 +1,19 @@
 /**
  * Draggable and sortable table rows. The output is an array of objects with a position attribute on each object.
  * @author David Tomas Ticona Saravia
- * @version 1.0.0
+ * @version 1.1.0
  * @license MIT
  */
 class SortableRows {
-  table: HTMLTableElement;
-  tbody: HTMLTableSectionElement;
-  currRow: HTMLTableRowElement | null = null;
-  dragElem: HTMLTableRowElement | null = null;
-  startX = 0;
-  startY = 0;
-  moveX = 0;
-  moveY = 0;
-  isDragged = false;
+  protected table: HTMLTableElement;
+  protected tbody: HTMLTableSectionElement;
+  protected currRow: HTMLTableRowElement | null = null;
+  protected dragElem: HTMLTableRowElement | null = null;
+  protected startX = 0;
+  protected startY = 0;
+  protected moveX = 0;
+  protected moveY = 0;
+  protected isDragged = false;
 
   constructor(id: string) {
     this.table = document.getElementById(id) as HTMLTableElement;

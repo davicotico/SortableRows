@@ -1,9 +1,3 @@
-/**
- * Draggable and sortable table rows. The output is an array of objects with a position attribute on each object.
- * @author David Tomas Ticona Saravia
- * @version 1.1.0
- * @license MIT
- */
 declare class SortableRows {
     protected table: HTMLTableElement;
     protected tbody: HTMLTableSectionElement;
@@ -35,5 +29,4 @@ declare class SortableRows {
         position: number;
     }[];
 }
-export { SortableRows };
-//# sourceMappingURL=index.d.ts.map
+//# sourceMappingURL=sortablerows.min.d.ts.map
