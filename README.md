@@ -37,15 +37,21 @@ Use the data attribute for each row
 </tbody>
 ```
 ### Javascript
+Import the class, import the CSS file and instantiate the class
 ```
 import { SortableRows } from "sortablerows";
 import "sortablerows/dist/sortablerows.css";
 var myTable = new SortableRows("myTable");
+```
+Get the sorted items by calling `getData()`
+```
 document.getElementById("btnOutput").addEventListener("click", () => {
   let output = myTable.getData();
   console.log(output);
 });
 ```
 ### Changelog
+#### v1.1.0 
+* Added minified version dist/sortablerows.min.js
 #### v1.0.0 
 * First release
