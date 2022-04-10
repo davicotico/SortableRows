@@ -51,6 +51,8 @@ document.getElementById("btnOutput").addEventListener("click", () => {
 });
 ```
 ### Changelog
+#### v1.1.1
+* Debug message removed
 #### v1.1.0 
 * Added minified version dist/sortablerows.min.js
 #### v1.0.0 

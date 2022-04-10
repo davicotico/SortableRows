@@ -1,7 +1,7 @@
 /**
  * Draggable and sortable table rows. The output is an array of objects with a position attribute on each object.
  * @author David Tomas Ticona Saravia
- * @version 1.1.0
+ * @version 1.1.1
  * @license MIT
  */
 class SortableRows {
@@ -58,7 +58,6 @@ class SortableRows {
  
   protected onEndDragging(event: MouseEvent | TouchEvent): void {
     if (!this.isDragged) return;
-    console.log("endDragging " + event.type);
     this.currRow?.classList.remove("is-dragging");
     this.table.removeChild(this.dragElem as Node);
     this.dragElem = null;

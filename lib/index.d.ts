@@ -1,7 +1,7 @@
 /**
  * Draggable and sortable table rows. The output is an array of objects with a position attribute on each object.
  * @author David Tomas Ticona Saravia
- * @version 1.1.0
+ * @version 1.1.1
  * @license MIT
  */
 declare class SortableRows {
