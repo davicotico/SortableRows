@@ -1,6 +1,6 @@
 {
   "name": "sortablerows",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Draggable and sortable table rows. The output is an array of objects with a position attribute on each object.",
   "main": "lib/index.js",
   "types": "lib",
