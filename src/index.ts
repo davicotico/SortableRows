@@ -17,10 +17,10 @@ class SortableRows {
 
   constructor(id: string) {
     this.table = document.getElementById(id) as HTMLTableElement;
-    this.tbody = this.table.querySelector("tbody") as HTMLTableSectionElement;
     if (this.table == null) {
       throw `You called the SortableRows constructor with "${id}" ID, but there is no such element in the document.`;
     }
+    this.tbody = this.table.querySelector("tbody") as HTMLTableSectionElement;
     if (this.table.tagName.toLowerCase() != "table") {
       throw "The selected element is not a <table>.";
     }
