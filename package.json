@@ -7,6 +7,11 @@
   "scripts": {
     "build": "tsc"
   },
+  "files": [
+    "lib",
+    "dist",
+    "README.MD"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davicotico/SortableRows.git"

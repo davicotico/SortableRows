@@ -40,7 +40,7 @@ Use the data attribute for each row
 Import the class, import the CSS file and instantiate the class
 ```
 import { SortableRows } from "sortablerows";
-import "sortablerows/dist/sortablerows.css";
+import "sortablerows/sortablerows.css";
 var myTable = new SortableRows("myTable");
 ```
 Get the sorted items by calling `getData()`
@@ -51,6 +51,8 @@ document.getElementById("btnOutput").addEventListener("click", () => {
 });
 ```
 ### Changelog
+#### v1.1.2
+* fix: fixed bug when main element is not founded
 #### v1.1.1
 * Debug message removed
 #### v1.1.0 
